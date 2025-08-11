@@ -1,6 +1,7 @@
 #include "SuperIntArray.h"
 #include "Time.h"
-
+#include "Term.h"
+#include "Polynomial.h"
 
 
 void assignmentTest() {
@@ -37,7 +38,8 @@ void testTimeIntegerConversion() {
     cout << "Total seconds: " << int(t1) << endl;
 }
 
-int main() {
+// time
+/*int main() {
     assignmentTest();
     testTimeAddition();
     testTimeSubtraction();
@@ -45,10 +47,10 @@ int main() {
     testTimeOutStreamOperator();
     testTimeIntegerConversion();
     return 0;
-} 
+} */
 
 
-
+// superintarray
 
 /*int main() {
     int arr[] = { 1, 2, 3 };
@@ -81,3 +83,23 @@ int main() {
 
     return 0;
 }*/
+
+// polynomial
+
+int main() {
+   
+    Term a1[] = { Term(3,2,'x'), Term(4,1,'x') };      // 3x^2 + 4x
+    Term a2[] = { Term(5,0,'x'), Term(2,2,'x') };      // 5 + 2x^2
+
+    Polynomial p1(a1, 2);
+    Polynomial p2(a2, 2);
+
+    cout << "P1(x) = " << p1 << "\n";
+    cout << "P2(x) = " << p2 << "\n";
+
+    auto sum  = p1 + p2;   cout << "P1 + P2 = " << sum  << "\n";
+    auto diff = p1 - p2;   cout << "P1 - P2 = " << diff << "\n";
+    auto prod = p1 * p2;   cout << "P1 * P2 = " << prod << "\n";
+
+    return 0;
+}

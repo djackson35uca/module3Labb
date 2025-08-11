@@ -124,11 +124,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Polynomial.cpp" />
     <ClCompile Include="superIntArray.cpp" />
+    <ClCompile Include="Term.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Polynomial.h" />
     <ClInclude Include="superIntArray.h" />
+    <ClInclude Include="Term.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
